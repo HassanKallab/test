@@ -23,8 +23,10 @@ if(strlen($tosip) == 4)
     </Response>
     <?php } else { if(substr($tosip,0,2)=="00") $tosip=substr($tosip,2,strlen($tosip)-1); if(substr($tosip,0,3)=="011") $tosip=substr($tosip,3,strlen($tosip)-1); ?>
     <Response>
-        <Dial callerId="<?php echo $callerId; ?>" >
+        <dial callerid="&lt;+16477244454&gt;">
             <?php echo $tosip; ?>
         </Dial>
     </Response>
     <?php } ?>
+
+
